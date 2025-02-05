@@ -10,7 +10,7 @@ const BlogList = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:8000/blogs")
+    fetch("https://risingsun-blog-server.onrender.com/blogs")
       .then((response) => response.json())
       .then((data) => setBlogs(data))
       .catch((error) => console.error("Error fetching blogs:", error));
