@@ -15,7 +15,7 @@ const Login = () => {
     setSuccessMessage("");
 
     try {
-      const response = await fetch("http://localhost:8000/account/login", {
+      const response = await fetch("https://risingsun-blog-server.onrender.com/account/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
