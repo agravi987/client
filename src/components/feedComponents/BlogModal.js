@@ -15,7 +15,7 @@ const BlogModal = () => {
   const fetchBlogs = useCallback(async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:8000/blogs");
+      const response = await fetch("https://risingsun-blog-server.onrender.com/blogs");
       if (!response.ok) throw new Error("Failed to fetch blogs");
       const data = await response.json();
       const userBlogs = data.filter((blog) => blog.author === userName);
