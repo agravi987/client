@@ -17,7 +17,7 @@ const BlogDetails = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:8000/blogs/${blogId}/comments`,
+        `https://risingsun-blog-server.onrender.com/blogs/${blogId}/comments`,
         {
           method: "POST",
           headers: {
@@ -51,7 +51,7 @@ const BlogDetails = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:8000/blogs/${blogId}/comments/${encodeURIComponent(
+        `https://risingsun-blog-server.onrender.com/blogs/${blogId}/comments/${encodeURIComponent(
           commentId
         )}`,
         {
@@ -88,7 +88,7 @@ const BlogDetails = () => {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`http://localhost:8000/blogs/${blogId}`, {
+      const res = await fetch(`https://risingsun-blog-server.onrender.com/blogs/${blogId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -106,7 +106,7 @@ const BlogDetails = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/blogs/${blogId}`);
+        const response = await fetch(`https://risingsun-blog-server.onrender.com/blogs/${blogId}`);
         const data = await response.json();
         setBlog(data);
       } catch (error) {
